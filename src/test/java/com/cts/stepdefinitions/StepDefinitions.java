@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.cts.base.LaunchWebsite;
 import com.cts.pages.HomePage;
 import com.cts.pages.LoginPage;
 
@@ -26,12 +27,8 @@ public class StepDefinitions {
 
 		// LaunchWebsite.launchWeb(driver);
 		// Write code here that turns the phrase above into concrete actions
-
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://examples.codecharge.com/TaskManager/Default.php");
+		LaunchWebsite.launchWeb("ch");
+		this.driver = LaunchWebsite.driver;
 
 	}
 
@@ -56,6 +53,8 @@ public class StepDefinitions {
 		actualTitle1.click();
 		loginPageObject.ClickOnAdminIcon(driver);
 		loginPageObject.ClickOnLogOut(driver);
+		
+		LaunchWebsite.terminate();
 
 	}
 
@@ -63,12 +62,9 @@ public class StepDefinitions {
 	@Given("I have browser with task management page1")
 	public void i_have_browser_with_task_management_page1() {
 		// Write code here that turns the phrase above into concrete actions
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://examples.codecharge.com/TaskManager/Default.php");
-	}
+		LaunchWebsite.launchWeb("ch");
+		this.driver = LaunchWebsite.driver;
+		}
 
 	@When("I click on Administration Icon and I enter invalid username as {string} and I enter valid password as {string}")
 	public void i_click_on_Administration_Icon_and_I_enter_invalid_username_as_and_I_enter_valid_password_as(
@@ -90,18 +86,15 @@ public class StepDefinitions {
 		Assert.assertEquals(expectedText, actualText);
 		System.out.println(actualText);
 
-		driver.quit();
+		LaunchWebsite.terminate();
 	}
 
 	// scenario 3
 	@Given("I have browser with task management page2")
 	public void i_have_browser_with_task_management_page2() {
 		// Write code here that turns the phrase above into concrete actions
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://examples.codecharge.com/TaskManager/Default.php");
+		LaunchWebsite.launchWeb("ch");
+		this.driver = LaunchWebsite.driver;
 	}
 
 	@When("I click on Administration Icon and I enter valid username as {string} and I enter invalid password as {string}")
@@ -124,19 +117,16 @@ public class StepDefinitions {
 		Assert.assertEquals(expectedText, actualText);
 		System.out.println(actualText);
 
-		driver.quit();
+		LaunchWebsite.terminate();
 	}
 
 	// scenario 4
 	@Given("I have browser with task management page3")
 	public void i_have_browser_with_task_management_page3() {
 		// Write code here that turns the phrase above into concrete actions
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://examples.codecharge.com/TaskManager/Default.php");
-	}
+		LaunchWebsite.launchWeb("ch");
+		this.driver = LaunchWebsite.driver;
+		}
 
 	@When("I click on Administration Icon and I enter invalid username as {string} and I enter invalid password as {string}")
 	public void i_click_on_Administration_Icon_and_I_enter_invalid_username_as_and_I_enter_invalid_password_as(
@@ -157,19 +147,15 @@ public class StepDefinitions {
 		Assert.assertEquals(expectedText, actualText);
 		System.out.println(actualText);
 
-		driver.quit();
-
+		LaunchWebsite.terminate();
 	}
 	
      //scenario 5
 	@Given("I have browser with the task management page")
 	public void i_have_browser_with_the_task_management_page() {
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://examples.codecharge.com/TaskManager/Default.php");
-	}
+		LaunchWebsite.launchWeb("ch");
+		this.driver = LaunchWebsite.driver;
+		}
 
 	@When("I click on the Administration Icon and I enter valid username as {string} and I enter valid password as {string}")
 	public void i_click_on_the_Administration_Icon_and_I_enter_valid_username_as_and_I_enter_valid_password_as(
@@ -184,7 +170,8 @@ public class StepDefinitions {
 	@Then("I should display the page and click on LogOut")
 	public void i_should_display_the_page_and_click_on_LogOut() {
 		loginPageObject.checkForLogOut(driver);
-		driver.quit();
+		
+		LaunchWebsite.terminate();
 
 	}
 

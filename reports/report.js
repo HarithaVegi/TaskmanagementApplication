@@ -14,7 +14,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "I click on Administration Icon and I enter username as \u0027admin\u0027 and  I enter password as \u0027admin\u0027",
+  "name": "I click on Administration Icon and I enter username as \u0027\u003cusername\u003e\u0027 and  I enter password as \u0027\u003cpassword\u003e\u0027",
   "keyword": "When "
 });
 formatter.step({
@@ -85,7 +85,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "I click on Administration Icon and I enter invalid username as \u0027abc\u0027 and I enter valid password as \u0027admin\u0027",
+  "name": "I click on Administration Icon and I enter invalid username as \u0027\u003cusername\u003e\u0027 and I enter valid password as \u0027\u003cpassword\u003e\u0027",
   "keyword": "When "
 });
 formatter.step({
@@ -156,7 +156,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "I click on Administration Icon and I enter valid username as \u0027admin\u0027 and I enter invalid password as \u0027abcxyz\u0027",
+  "name": "I click on Administration Icon and I enter valid username as \u0027\u003cusername\u003e\u0027 and I enter invalid password as \u0027\u003cpassword\u003e\u0027",
   "keyword": "When "
 });
 formatter.step({
@@ -227,7 +227,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "I click on Administration Icon and I enter invalid username as \u0027abc\u0027 and I enter invalid password as \u0027xyz\u0027",
+  "name": "I click on Administration Icon and I enter invalid username as \u0027\u003cusername\u003e\u0027 and I enter invalid password as \u0027\u003cpassword\u003e\u0027",
   "keyword": "When "
 });
 formatter.step({
@@ -298,7 +298,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "I click on the Administration Icon and I enter valid username as \u0027admin\u0027 and I enter valid password as \u0027admin\u0027",
+  "name": "I click on the Administration Icon and I enter valid username as \u0027\u003cusername\u003e\u0027 and I enter valid password as \u0027\u003cpassword\u003e\u0027",
   "keyword": "When "
 });
 formatter.step({
